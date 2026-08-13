@@ -3,32 +3,23 @@ name: Flutter Build APK
 on:
   workflow_dispatch:
     inputs:
+      job_id:
+        description: 'Job ID'
+        required: false
+      zip_path:
+        description: 'Zip Path'
+        required: false
+      zip_url:
+        description: 'Zip URL'
+        required: false
       download_url:
         description: 'Source code zip URL'
-        required: true
+        required: false
       tag:
         description: 'Build tag'
-        required: true
+        required: false
       build_type:
-        description: 'Build type (release/debug)'
-        required: true
-      app_name:
-        description: 'App Name'
-        required: false
-      package_name:
-        description: 'Package Name'
-        required: false
-      version_name:
-        description: 'Version Name'
-        required: false
-      version_code:
-        description: 'Version Code'
-        required: false
-      chat_id:
-        description: 'Chat ID'
-        required: false
-      bot_token:
-        description: 'Bot Token'
+        description: 'Build type'
         required: false
 
 jobs:
