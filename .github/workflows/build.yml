@@ -1,1 +1,30 @@
+name: Flutter Build APK
 
+on:
+  workflow_dispatch:
+    inputs:
+      download_url:
+        description: 'Source code zip URL'
+        required: true
+      tag:
+        description: 'Build tag'
+        required: true
+      build_type:
+        description: 'Build type (release/debug)'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.19.x'
+          channel: 'stable'
+
+      - name: Build APK Placeholder
+        run: echo "Build script berjalan"
