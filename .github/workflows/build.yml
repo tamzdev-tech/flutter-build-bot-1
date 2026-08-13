@@ -12,6 +12,24 @@ on:
       build_type:
         description: 'Build type (release/debug)'
         required: true
+      app_name:
+        description: 'App Name'
+        required: false
+      package_name:
+        description: 'Package Name'
+        required: false
+      version_name:
+        description: 'Version Name'
+        required: false
+      version_code:
+        description: 'Version Code'
+        required: false
+      chat_id:
+        description: 'Chat ID'
+        required: false
+      bot_token:
+        description: 'Bot Token'
+        required: false
 
 jobs:
   build:
